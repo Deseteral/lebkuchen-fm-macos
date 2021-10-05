@@ -1,0 +1,668 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D3A61B37270CE06E00C9E469 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A61B36270CE06E00C9E469 /* SettingsView.swift */; };
+		D3A61B41270CE65D00C9E469 /* XSoundsEndpointService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A61B40270CE65D00C9E469 /* XSoundsEndpointService.swift */; };
+		D3A61B43270CE6C300C9E469 /* XSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A61B42270CE6C300C9E469 /* XSound.swift */; };
+		D3A61B45270CE71400C9E469 /* SoundsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A61B44270CE71400C9E469 /* SoundsListViewModel.swift */; };
+		D3A61B47270CE76000C9E469 /* XSoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A61B46270CE76000C9E469 /* XSoundPlayer.swift */; };
+		D3A61B49270CE7F500C9E469 /* PasteToSlack.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A61B48270CE7F500C9E469 /* PasteToSlack.swift */; };
+		D3A61B4B270CEA9400C9E469 /* AppStorageKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A61B4A270CEA9400C9E469 /* AppStorageKeys.swift */; };
+		D3FBE1D3270BD05300DE140D /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FBE1D2270BD05300DE140D /* App.swift */; };
+		D3FBE1D7270BD05600DE140D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3FBE1D6270BD05600DE140D /* Assets.xcassets */; };
+		D3FBE1DA270BD05600DE140D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3FBE1D9270BD05600DE140D /* Preview Assets.xcassets */; };
+		D3FBE1E6270BD05600DE140D /* x_sounds_macTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FBE1E5270BD05600DE140D /* x_sounds_macTests.swift */; };
+		D3FBE1F1270BD05600DE140D /* x_sounds_macUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FBE1F0270BD05600DE140D /* x_sounds_macUITests.swift */; };
+		D3FBE200270BD08D00DE140D /* SoundsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FBE1FE270BD08C00DE140D /* SoundsList.swift */; };
+		D3FBE201270BD08D00DE140D /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FBE1FF270BD08C00DE140D /* WebService.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D3FBE1E2270BD05600DE140D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D3FBE1C7270BD05300DE140D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D3FBE1CE270BD05300DE140D;
+			remoteInfo = "x-sounds-mac";
+		};
+		D3FBE1ED270BD05600DE140D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D3FBE1C7270BD05300DE140D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D3FBE1CE270BD05300DE140D;
+			remoteInfo = "x-sounds-mac";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D3A61B36270CE06E00C9E469 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		D3A61B40270CE65D00C9E469 /* XSoundsEndpointService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XSoundsEndpointService.swift; sourceTree = "<group>"; };
+		D3A61B42270CE6C300C9E469 /* XSound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XSound.swift; sourceTree = "<group>"; };
+		D3A61B44270CE71400C9E469 /* SoundsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundsListViewModel.swift; sourceTree = "<group>"; };
+		D3A61B46270CE76000C9E469 /* XSoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XSoundPlayer.swift; sourceTree = "<group>"; };
+		D3A61B48270CE7F500C9E469 /* PasteToSlack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasteToSlack.swift; sourceTree = "<group>"; };
+		D3A61B4A270CEA9400C9E469 /* AppStorageKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStorageKeys.swift; sourceTree = "<group>"; };
+		D3FBE1CF270BD05300DE140D /* x-sounds-mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "x-sounds-mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3FBE1D2270BD05300DE140D /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		D3FBE1D6270BD05600DE140D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D3FBE1D9270BD05600DE140D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D3FBE1DB270BD05600DE140D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3FBE1E1270BD05600DE140D /* x-sounds-macTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "x-sounds-macTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3FBE1E5270BD05600DE140D /* x_sounds_macTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = x_sounds_macTests.swift; sourceTree = "<group>"; };
+		D3FBE1E7270BD05600DE140D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3FBE1EC270BD05600DE140D /* x-sounds-macUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "x-sounds-macUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3FBE1F0270BD05600DE140D /* x_sounds_macUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = x_sounds_macUITests.swift; sourceTree = "<group>"; };
+		D3FBE1F2270BD05600DE140D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3FBE1FE270BD08C00DE140D /* SoundsList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundsList.swift; sourceTree = "<group>"; };
+		D3FBE1FF270BD08C00DE140D /* WebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		D3FBE202270C5A4D00DE140D /* x_sounds_mac.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = x_sounds_mac.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D3FBE1CC270BD05300DE140D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3FBE1DE270BD05600DE140D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3FBE1E9270BD05600DE140D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D3A61B38270CE1DA00C9E469 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D3A61B3C270CE21600C9E469 /* SoundsList */,
+				D3A61B39270CE1EA00C9E469 /* Settings */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D3A61B39270CE1EA00C9E469 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				D3A61B36270CE06E00C9E469 /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		D3A61B3C270CE21600C9E469 /* SoundsList */ = {
+			isa = PBXGroup;
+			children = (
+				D3FBE1FE270BD08C00DE140D /* SoundsList.swift */,
+				D3A61B44270CE71400C9E469 /* SoundsListViewModel.swift */,
+			);
+			path = SoundsList;
+			sourceTree = "<group>";
+		};
+		D3A61B3D270CE26A00C9E469 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D3FBE1FF270BD08C00DE140D /* WebService.swift */,
+				D3A61B48270CE7F500C9E469 /* PasteToSlack.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		D3A61B3E270CE64400C9E469 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				D3A61B3F270CE64B00C9E469 /* XSound */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		D3A61B3F270CE64B00C9E469 /* XSound */ = {
+			isa = PBXGroup;
+			children = (
+				D3A61B40270CE65D00C9E469 /* XSoundsEndpointService.swift */,
+				D3A61B42270CE6C300C9E469 /* XSound.swift */,
+				D3A61B46270CE76000C9E469 /* XSoundPlayer.swift */,
+			);
+			path = XSound;
+			sourceTree = "<group>";
+		};
+		D3FBE1C6270BD05300DE140D = {
+			isa = PBXGroup;
+			children = (
+				D3FBE1D1270BD05300DE140D /* x-sounds-mac */,
+				D3FBE1E4270BD05600DE140D /* x-sounds-macTests */,
+				D3FBE1EF270BD05600DE140D /* x-sounds-macUITests */,
+				D3FBE1D0270BD05300DE140D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D3FBE1D0270BD05300DE140D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D3FBE1CF270BD05300DE140D /* x-sounds-mac.app */,
+				D3FBE1E1270BD05600DE140D /* x-sounds-macTests.xctest */,
+				D3FBE1EC270BD05600DE140D /* x-sounds-macUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D3FBE1D1270BD05300DE140D /* x-sounds-mac */ = {
+			isa = PBXGroup;
+			children = (
+				D3A61B3E270CE64400C9E469 /* Domain */,
+				D3A61B3D270CE26A00C9E469 /* Services */,
+				D3A61B38270CE1DA00C9E469 /* Views */,
+				D3FBE1D2270BD05300DE140D /* App.swift */,
+				D3A61B4A270CEA9400C9E469 /* AppStorageKeys.swift */,
+				D3FBE1DB270BD05600DE140D /* Info.plist */,
+				D3FBE202270C5A4D00DE140D /* x_sounds_mac.entitlements */,
+				D3FBE1D6270BD05600DE140D /* Assets.xcassets */,
+				D3FBE1D8270BD05600DE140D /* Preview Content */,
+			);
+			path = "x-sounds-mac";
+			sourceTree = "<group>";
+		};
+		D3FBE1D8270BD05600DE140D /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D3FBE1D9270BD05600DE140D /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D3FBE1E4270BD05600DE140D /* x-sounds-macTests */ = {
+			isa = PBXGroup;
+			children = (
+				D3FBE1E5270BD05600DE140D /* x_sounds_macTests.swift */,
+				D3FBE1E7270BD05600DE140D /* Info.plist */,
+			);
+			path = "x-sounds-macTests";
+			sourceTree = "<group>";
+		};
+		D3FBE1EF270BD05600DE140D /* x-sounds-macUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D3FBE1F0270BD05600DE140D /* x_sounds_macUITests.swift */,
+				D3FBE1F2270BD05600DE140D /* Info.plist */,
+			);
+			path = "x-sounds-macUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D3FBE1CE270BD05300DE140D /* x-sounds-mac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D3FBE1F5270BD05600DE140D /* Build configuration list for PBXNativeTarget "x-sounds-mac" */;
+			buildPhases = (
+				D3FBE1CB270BD05300DE140D /* Sources */,
+				D3FBE1CC270BD05300DE140D /* Frameworks */,
+				D3FBE1CD270BD05300DE140D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "x-sounds-mac";
+			productName = "x-sounds-mac";
+			productReference = D3FBE1CF270BD05300DE140D /* x-sounds-mac.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D3FBE1E0270BD05600DE140D /* x-sounds-macTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D3FBE1F8270BD05600DE140D /* Build configuration list for PBXNativeTarget "x-sounds-macTests" */;
+			buildPhases = (
+				D3FBE1DD270BD05600DE140D /* Sources */,
+				D3FBE1DE270BD05600DE140D /* Frameworks */,
+				D3FBE1DF270BD05600DE140D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D3FBE1E3270BD05600DE140D /* PBXTargetDependency */,
+			);
+			name = "x-sounds-macTests";
+			productName = "x-sounds-macTests";
+			productReference = D3FBE1E1270BD05600DE140D /* x-sounds-macTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D3FBE1EB270BD05600DE140D /* x-sounds-macUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D3FBE1FB270BD05600DE140D /* Build configuration list for PBXNativeTarget "x-sounds-macUITests" */;
+			buildPhases = (
+				D3FBE1E8270BD05600DE140D /* Sources */,
+				D3FBE1E9270BD05600DE140D /* Frameworks */,
+				D3FBE1EA270BD05600DE140D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D3FBE1EE270BD05600DE140D /* PBXTargetDependency */,
+			);
+			name = "x-sounds-macUITests";
+			productName = "x-sounds-macUITests";
+			productReference = D3FBE1EC270BD05600DE140D /* x-sounds-macUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D3FBE1C7270BD05300DE140D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					D3FBE1CE270BD05300DE140D = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					D3FBE1E0270BD05600DE140D = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = D3FBE1CE270BD05300DE140D;
+					};
+					D3FBE1EB270BD05600DE140D = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = D3FBE1CE270BD05300DE140D;
+					};
+				};
+			};
+			buildConfigurationList = D3FBE1CA270BD05300DE140D /* Build configuration list for PBXProject "x-sounds-mac" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D3FBE1C6270BD05300DE140D;
+			productRefGroup = D3FBE1D0270BD05300DE140D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D3FBE1CE270BD05300DE140D /* x-sounds-mac */,
+				D3FBE1E0270BD05600DE140D /* x-sounds-macTests */,
+				D3FBE1EB270BD05600DE140D /* x-sounds-macUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D3FBE1CD270BD05300DE140D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3FBE1DA270BD05600DE140D /* Preview Assets.xcassets in Resources */,
+				D3FBE1D7270BD05600DE140D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3FBE1DF270BD05600DE140D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3FBE1EA270BD05600DE140D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D3FBE1CB270BD05300DE140D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3A61B41270CE65D00C9E469 /* XSoundsEndpointService.swift in Sources */,
+				D3FBE201270BD08D00DE140D /* WebService.swift in Sources */,
+				D3A61B43270CE6C300C9E469 /* XSound.swift in Sources */,
+				D3A61B47270CE76000C9E469 /* XSoundPlayer.swift in Sources */,
+				D3A61B37270CE06E00C9E469 /* SettingsView.swift in Sources */,
+				D3FBE200270BD08D00DE140D /* SoundsList.swift in Sources */,
+				D3A61B49270CE7F500C9E469 /* PasteToSlack.swift in Sources */,
+				D3A61B45270CE71400C9E469 /* SoundsListViewModel.swift in Sources */,
+				D3FBE1D3270BD05300DE140D /* App.swift in Sources */,
+				D3A61B4B270CEA9400C9E469 /* AppStorageKeys.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3FBE1DD270BD05600DE140D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3FBE1E6270BD05600DE140D /* x_sounds_macTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3FBE1E8270BD05600DE140D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3FBE1F1270BD05600DE140D /* x_sounds_macUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D3FBE1E3270BD05600DE140D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D3FBE1CE270BD05300DE140D /* x-sounds-mac */;
+			targetProxy = D3FBE1E2270BD05600DE140D /* PBXContainerItemProxy */;
+		};
+		D3FBE1EE270BD05600DE140D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D3FBE1CE270BD05300DE140D /* x-sounds-mac */;
+			targetProxy = D3FBE1ED270BD05600DE140D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		D3FBE1F3270BD05600DE140D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D3FBE1F4270BD05600DE140D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		D3FBE1F6270BD05600DE140D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "x-sounds-mac/x_sounds_mac.entitlements";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"x-sounds-mac/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "x-sounds-mac/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.deseteral.lebkuchen-fm.x-sounds-mac";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		D3FBE1F7270BD05600DE140D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "x-sounds-mac/x_sounds_mac.entitlements";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"x-sounds-mac/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "x-sounds-mac/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.deseteral.lebkuchen-fm.x-sounds-mac";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		D3FBE1F9270BD05600DE140D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "x-sounds-macTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.deseteral.lebkuchen-fm.x-sounds-macTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/x-sounds-mac.app/Contents/MacOS/x-sounds-mac";
+			};
+			name = Debug;
+		};
+		D3FBE1FA270BD05600DE140D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "x-sounds-macTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.deseteral.lebkuchen-fm.x-sounds-macTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/x-sounds-mac.app/Contents/MacOS/x-sounds-mac";
+			};
+			name = Release;
+		};
+		D3FBE1FC270BD05600DE140D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "x-sounds-macUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.deseteral.lebkuchen-fm.x-sounds-macUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "x-sounds-mac";
+			};
+			name = Debug;
+		};
+		D3FBE1FD270BD05600DE140D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "x-sounds-macUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.deseteral.lebkuchen-fm.x-sounds-macUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "x-sounds-mac";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D3FBE1CA270BD05300DE140D /* Build configuration list for PBXProject "x-sounds-mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3FBE1F3270BD05600DE140D /* Debug */,
+				D3FBE1F4270BD05600DE140D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D3FBE1F5270BD05600DE140D /* Build configuration list for PBXNativeTarget "x-sounds-mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3FBE1F6270BD05600DE140D /* Debug */,
+				D3FBE1F7270BD05600DE140D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D3FBE1F8270BD05600DE140D /* Build configuration list for PBXNativeTarget "x-sounds-macTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3FBE1F9270BD05600DE140D /* Debug */,
+				D3FBE1FA270BD05600DE140D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D3FBE1FB270BD05600DE140D /* Build configuration list for PBXNativeTarget "x-sounds-macUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3FBE1FC270BD05600DE140D /* Debug */,
+				D3FBE1FD270BD05600DE140D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D3FBE1C7270BD05300DE140D /* Project object */;
+}
