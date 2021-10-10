@@ -23,16 +23,16 @@ struct SettingsView: View {
 }
 
 struct RequiredSettingsView: View {
-    @AppStorage(AppStorageKeys.slackChanelId.rawValue) var slackChanelId = ""
+    @AppStorage(AppStorageKeys.slackChannelId.rawValue) var slackChannelId = ""
     @AppStorage(AppStorageKeys.slackTeamId.rawValue) var slackTeamId = ""
     @AppStorage(AppStorageKeys.slackCommandEntry.rawValue) var slackCommand = ""
-    @AppStorage(AppStorageKeys.FMinstancePath.rawValue) var instancePath = ""
+    @AppStorage(AppStorageKeys.fmInstancePath.rawValue) var instancePath = ""
 
 
     var body: some View {
         Form {
             TextField("Slack team id", text: $slackTeamId)
-            TextField("Slack channel id", text: $slackChanelId)
+            TextField("Slack channel id", text: $slackChannelId)
             TextField("slack command", text: $slackCommand)
             TextField("instance path", text: $instancePath)
         }

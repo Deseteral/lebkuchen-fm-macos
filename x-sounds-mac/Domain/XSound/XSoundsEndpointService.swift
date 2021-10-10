@@ -3,13 +3,15 @@ import Foundation
 import SwiftUI
 
 struct XSoundsEndpointService {
-    @AppStorage(AppStorageKeys.FMinstancePath.rawValue) static var instancePath = ""
-    
-    struct URLCreatingError: Error { }
-    
+    @AppStorage(AppStorageKeys.fmInstancePath.rawValue) static var instancePath = ""
+
     static func getSounds(webService: WebServiceProtocol) -> AnyPublisher<[XSound], Error> {
-        let urlString = instancePath + "x-sounds"
-        var request = URLRequest(url: URL(string: urlString)!)
+        guard let url = URL(string: instancePath) else {
+            return Fail<[XSound], Error>
+                .init(error: WebService.Error.invalidURL)
+                .eraseToAnyPublisher()
+        }
+        var request = URLRequest(url: url.appendingPathComponent("x-sounds", isDirectory: true))
         request.httpMethod = "Get"
         let resource = WebResource<Response>(request: request)
         return webService.load(resource: resource)

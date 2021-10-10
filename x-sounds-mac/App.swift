@@ -1,7 +1,7 @@
 import SwiftUI
 
 @main
-struct x_sounds_macApp: App {
+struct LebkuchenFmSoundsApp: App {
     var body: some Scene {
         WindowGroup {
             SoundsListView()

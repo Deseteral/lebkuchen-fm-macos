@@ -17,6 +17,7 @@ final class WebService: WebServiceProtocol {
         case httpError(Int)
         case invalidData
         case terminated
+        case invalidURL
     }
 
     func load<T: Decodable>(resource: WebResource<T>) -> AnyPublisher<T, Swift.Error> {

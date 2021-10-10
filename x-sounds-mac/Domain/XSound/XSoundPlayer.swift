@@ -14,12 +14,8 @@ final class XSoundPlayer : ObservableObject {
         NotificationCenter.default.removeObserver(self)
     }
     
-    func playSound(sound: URL, id: String){
+    func playSound(sound: URL, id: String) {
         self.audioPlayer?.pause()
-        guard AVAsset(url: sound).isPlayable else {
-            failed.insert(id)
-            return
-        }
         guard playing != id else {
             self.audioPlayer?.pause()
             playing = nil
@@ -38,6 +34,11 @@ final class XSoundPlayer : ObservableObject {
                                                selector: #selector(playerItemDidPlayToEndTime),
                                                name: .AVPlayerItemDidPlayToEndTime,
                                                object: self.audioPlayer?.currentItem)
+        if !AVAsset(url: sound).isPlayable {
+            failed.insert(id)
+        } else {
+            failed.remove(id)
+        }
     }
     
     @objc func playerItemDidPlayToEndTime() {

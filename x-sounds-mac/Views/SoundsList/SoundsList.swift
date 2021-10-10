@@ -6,7 +6,13 @@ struct SoundsListView: View {
     @State var searchText: String = ""
     @StateObject private var soundManager = XSoundPlayer()
     @StateObject private var pasteHandler = PasteToSlackHandler()
-    
+    var filteredSounds: [XSound] {
+        viewModel.sounds.filter {
+            searchText.isEmpty ||
+                $0.name.localizedStandardContains(searchText)
+        }
+    }
+
     var body: some View {
         VStack {
             HStack {
@@ -16,7 +22,7 @@ struct SoundsListView: View {
                 Button(action: {
                     viewModel.reload()
                 }, label: {
-                    Text("Download x-sounds")
+                    Text("Fetch XSounds list")
                 })
             }.padding(.trailing)
             
@@ -27,13 +33,7 @@ struct SoundsListView: View {
                     Text("copy").frame(width: 50)
                     Text("preview").frame(width: 50)
                 }) {
-                    ForEach(
-                        viewModel.sounds.filter {
-                            searchText.isEmpty ||
-                                $0.name.localizedStandardContains(searchText)
-                        },
-                        id: \.id
-                    ) { sound in
+                    ForEach(filteredSounds, id: \.id ) { sound in
                         HStack {
                             Text(sound.name)
                             Spacer()
@@ -56,7 +56,11 @@ struct SoundsListView: View {
             }
             .listStyle(PlainListStyle())
             .padding(.bottom)
-        }.frame(minWidth: 300, minHeight: 300)
+        }
+        .frame(minWidth: 300, minHeight: 300)
+        .onAppear() {
+            viewModel.reload()
+        }
     }
     
     func soundTapped(sound: XSound) {

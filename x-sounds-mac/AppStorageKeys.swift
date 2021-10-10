@@ -4,9 +4,9 @@ import SwiftUI
 
 enum AppStorageKeys: String {
     case slackTeamId
-    case slackChanelId
+    case slackChannelId
     case slackCommandEntry
     case relativeVolumeShouldUse
     case relativeVolumeValue
-    case FMinstancePath
+    case fmInstancePath
 }

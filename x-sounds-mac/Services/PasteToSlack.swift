@@ -3,7 +3,7 @@ import SwiftUI
 final class PasteToSlackHandler : ObservableObject {
     private var valueToPaste: String? = nil
     private let notificationName = NSWorkspace.didActivateApplicationNotification
-    @AppStorage(AppStorageKeys.slackChanelId.rawValue) var slackChanelId = ""
+    @AppStorage(AppStorageKeys.slackChannelId.rawValue) var slackChannelId = ""
     @AppStorage(AppStorageKeys.slackTeamId.rawValue) var slackTeamId = ""
     
     init() {
@@ -19,14 +19,19 @@ final class PasteToSlackHandler : ObservableObject {
             .removeObserver(self, name: notificationName, object: nil)
     }
     
-    func paste(text:String) {
+    func paste(text: String) {
         valueToPaste = text
         let pasteboard = NSPasteboard.general
         pasteboard.clearContents()
         pasteboard.declareTypes([.string], owner: nil)
         pasteboard.setString(text, forType: .string)
-        let url = URL(string: "slack://channel?team=\(slackTeamId)&id=\(slackChanelId)")!
-        NSWorkspace.shared.open(url)
+
+        var urlComponents = URLComponents(string: "slack://channel")
+        urlComponents?.queryItems?.append(URLQueryItem(name: "team", value: slackTeamId))
+        urlComponents?.queryItems?.append(URLQueryItem(name: "id", value: slackChannelId))
+        if let url = urlComponents?.url {
+            NSWorkspace.shared.open(url)
+        }
     }
     
     @objc private func didActivateApplicationNotification(_ notification: NSNotification) {
