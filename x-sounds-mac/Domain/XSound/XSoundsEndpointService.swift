@@ -11,7 +11,7 @@ struct XSoundsEndpointService {
                 .init(error: WebService.Error.invalidURL)
                 .eraseToAnyPublisher()
         }
-        var request = URLRequest(url: url.appendingPathComponent("x-sounds", isDirectory: true))
+        var request = URLRequest(url: url.appendingPathComponent("x-sounds", isDirectory: false))
         request.httpMethod = "Get"
         let resource = WebResource<Response>(request: request)
         return webService.load(resource: resource)

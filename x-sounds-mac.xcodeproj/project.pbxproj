@@ -14,10 +14,11 @@
 		D3A61B47270CE76000C9E469 /* XSoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A61B46270CE76000C9E469 /* XSoundPlayer.swift */; };
 		D3A61B49270CE7F500C9E469 /* PasteToSlack.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A61B48270CE7F500C9E469 /* PasteToSlack.swift */; };
 		D3A61B4B270CEA9400C9E469 /* AppStorageKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A61B4A270CEA9400C9E469 /* AppStorageKeys.swift */; };
+		D3A61B4D2714C9A000C9E469 /* XCTestCase+testPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A61B4C2714C9A000C9E469 /* XCTestCase+testPublisher.swift */; };
 		D3FBE1D3270BD05300DE140D /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FBE1D2270BD05300DE140D /* App.swift */; };
 		D3FBE1D7270BD05600DE140D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3FBE1D6270BD05600DE140D /* Assets.xcassets */; };
 		D3FBE1DA270BD05600DE140D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3FBE1D9270BD05600DE140D /* Preview Assets.xcassets */; };
-		D3FBE1E6270BD05600DE140D /* x_sounds_macTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FBE1E5270BD05600DE140D /* x_sounds_macTests.swift */; };
+		D3FBE1E6270BD05600DE140D /* XSoundsEndpointServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FBE1E5270BD05600DE140D /* XSoundsEndpointServiceTests.swift */; };
 		D3FBE1F1270BD05600DE140D /* x_sounds_macUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FBE1F0270BD05600DE140D /* x_sounds_macUITests.swift */; };
 		D3FBE200270BD08D00DE140D /* SoundsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FBE1FE270BD08C00DE140D /* SoundsList.swift */; };
 		D3FBE201270BD08D00DE140D /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FBE1FF270BD08C00DE140D /* WebService.swift */; };
@@ -48,13 +49,14 @@
 		D3A61B46270CE76000C9E469 /* XSoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XSoundPlayer.swift; sourceTree = "<group>"; };
 		D3A61B48270CE7F500C9E469 /* PasteToSlack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasteToSlack.swift; sourceTree = "<group>"; };
 		D3A61B4A270CEA9400C9E469 /* AppStorageKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStorageKeys.swift; sourceTree = "<group>"; };
+		D3A61B4C2714C9A000C9E469 /* XCTestCase+testPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+testPublisher.swift"; sourceTree = "<group>"; };
 		D3FBE1CF270BD05300DE140D /* x-sounds-mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "x-sounds-mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3FBE1D2270BD05300DE140D /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		D3FBE1D6270BD05600DE140D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3FBE1D9270BD05600DE140D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D3FBE1DB270BD05600DE140D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3FBE1E1270BD05600DE140D /* x-sounds-macTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "x-sounds-macTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D3FBE1E5270BD05600DE140D /* x_sounds_macTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = x_sounds_macTests.swift; sourceTree = "<group>"; };
+		D3FBE1E5270BD05600DE140D /* XSoundsEndpointServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XSoundsEndpointServiceTests.swift; sourceTree = "<group>"; };
 		D3FBE1E7270BD05600DE140D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3FBE1EC270BD05600DE140D /* x-sounds-macUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "x-sounds-macUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3FBE1F0270BD05600DE140D /* x_sounds_macUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = x_sounds_macUITests.swift; sourceTree = "<group>"; };
@@ -142,6 +144,14 @@
 			path = XSound;
 			sourceTree = "<group>";
 		};
+		D3A61B4E2714C9C900C9E469 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D3A61B4C2714C9A000C9E469 /* XCTestCase+testPublisher.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		D3FBE1C6270BD05300DE140D = {
 			isa = PBXGroup;
 			children = (
@@ -189,7 +199,8 @@
 		D3FBE1E4270BD05600DE140D /* x-sounds-macTests */ = {
 			isa = PBXGroup;
 			children = (
-				D3FBE1E5270BD05600DE140D /* x_sounds_macTests.swift */,
+				D3A61B4E2714C9C900C9E469 /* Helpers */,
+				D3FBE1E5270BD05600DE140D /* XSoundsEndpointServiceTests.swift */,
 				D3FBE1E7270BD05600DE140D /* Info.plist */,
 			);
 			path = "x-sounds-macTests";
@@ -350,7 +361,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3FBE1E6270BD05600DE140D /* x_sounds_macTests.swift in Sources */,
+				D3FBE1E6270BD05600DE140D /* XSoundsEndpointServiceTests.swift in Sources */,
+				D3A61B4D2714C9A000C9E469 /* XCTestCase+testPublisher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
