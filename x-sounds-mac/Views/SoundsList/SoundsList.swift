@@ -12,8 +12,8 @@ struct SoundsListView: View {
         viewModel.sounds.filter { sound in
             let searchWords = Set(searchText.split(separator: " ").map { String($0) })
             let tagsAndNameJoinedString = sound.name.appending(sound.tags?.joined(separator: " ") ?? "")
-            let allWordsFromSearchTextInTagsOrName = searchWords.allSatisfy(tagsAndNameJoinedString.localizedCaseInsensitiveContains)
-            return allWordsFromSearchTextInTagsOrName
+            let allWordsFromSearchInTagsOrName = searchWords.allSatisfy(tagsAndNameJoinedString.localizedStandardContains)
+            return allWordsFromSearchInTagsOrName
         }
     }
 
