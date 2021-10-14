@@ -9,11 +9,11 @@ struct SoundsListView: View {
     @AppStorage(AppStorageKeys.showTags.rawValue) var showTags = false
 
     var filteredSounds: [XSound] {
-        viewModel.sounds.filter {
-            let searchTextInName = $0.name.localizedStandardContains(searchText)
-            let searchTextInTags = $0.tags?.contains(where: {$0.contains(searchText)}) ?? false
-            let shouldDisplaySound = searchText.isEmpty || searchTextInName || searchTextInTags
-            return shouldDisplaySound
+        viewModel.sounds.filter { sound in
+            let searchWords = Set(searchText.split(separator: " ").map { String($0) })
+            let tagsAndNameJoinedString = sound.name.appending(sound.tags?.joined(separator: " ") ?? "")
+            let allWordsFromSearchTextInTagsOrName = searchWords.allSatisfy(tagsAndNameJoinedString.localizedCaseInsensitiveContains)
+            return allWordsFromSearchTextInTagsOrName
         }
     }
 
