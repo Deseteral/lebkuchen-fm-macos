@@ -9,4 +9,5 @@ enum AppStorageKeys: String {
     case relativeVolumeShouldUse
     case relativeVolumeValue
     case fmInstancePath
+    case showTags
 }

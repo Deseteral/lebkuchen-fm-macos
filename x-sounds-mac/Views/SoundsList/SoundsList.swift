@@ -6,10 +6,14 @@ struct SoundsListView: View {
     @State var searchText: String = ""
     @StateObject private var soundManager = XSoundPlayer()
     @StateObject private var pasteHandler = PasteToSlackHandler()
+    @AppStorage(AppStorageKeys.showTags.rawValue) var showTags = false
+
     var filteredSounds: [XSound] {
         viewModel.sounds.filter {
-            searchText.isEmpty ||
-                $0.name.localizedStandardContains(searchText)
+            let searchTextInName = $0.name.localizedStandardContains(searchText)
+            let searchTextInTags = $0.tags?.contains(where: {$0.contains(searchText)}) ?? false
+            let shouldDisplaySound = searchText.isEmpty || searchTextInName || searchTextInTags
+            return shouldDisplaySound
         }
     }
 
@@ -34,23 +38,7 @@ struct SoundsListView: View {
                     Text("preview").frame(width: 50)
                 }) {
                     ForEach(filteredSounds, id: \.id ) { sound in
-                        HStack {
-                            Text(sound.name)
-                            Spacer()
-                            if soundManager.failed.contains(sound.id) {
-                                Image(systemName: "xmark.octagon")
-                            }
-                            Button(action: {
-                                soundTapped(sound: sound)
-                            }, label: {
-                                Image(systemName: "doc.on.doc")
-                            }).frame(width: 50)
-                            Button(action: {
-                                soundManager.playSound(sound: sound.url, id: sound.id)
-                            }, label: {
-                                Image(systemName: soundManager.playing == sound.id ? "pause" : "play")
-                            }).frame(width: 50)
-                        }
+                        soundRow(sound)
                     }
                 }
             }
@@ -66,10 +54,52 @@ struct SoundsListView: View {
     func soundTapped(sound: XSound) {
         pasteHandler.paste(text: "/fm x \(sound.name)")
     }
+
+    @ViewBuilder func soundRow(_ sound: XSound) -> some View {
+        let tags = sound.tags?.joined(separator: ", ")
+        HStack {
+            Text(sound.name)
+                .font(.callout)
+                .foregroundColor(.primary)
+            if let tags = tags, !tags.isEmpty, showTags {
+                Text("(\(tags))")
+                    .font(.caption2)
+                    .foregroundColor(.secondary)
+            }
+            Spacer()
+            if soundManager.failed.contains(sound.id) {
+                Image(systemName: "xmark.octagon")
+            }
+            Button(action: {
+                soundTapped(sound: sound)
+            }, label: {
+                Image(systemName: "doc.on.doc")
+            }).frame(width: 50)
+            Button(action: {
+                soundManager.playSound(sound: sound.url, id: sound.id)
+            }, label: {
+                Image(systemName: soundManager.playing == sound.id ? "pause" : "play")
+            }).frame(width: 50)
+        }
+    }
 }
 
 struct SoundsListView_Previews: PreviewProvider {
+    final class ViewModelMock: XSoundsViewModel {
+        override var sounds: [XSound] {
+            (1...10).map { i in
+                XSound(
+                    id: String(i),
+                    name: "Name_\(i)",
+                    url: URL(string: "www.example.com")!,
+                    timesPlayed: 0,
+                    tags: Array((0...2).map {"tag\($0)"}.prefix(Int.random(in: 0...2)))
+                )
+            }
+        }
+    }
+    
     static var previews: some View {
-        SoundsListView()
+        SoundsListView(viewModel: ViewModelMock(), searchText: "")
     }
 }

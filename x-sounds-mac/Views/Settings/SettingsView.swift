@@ -44,6 +44,7 @@ struct RequiredSettingsView: View {
 struct AdditionalSettingsView: View {
     @AppStorage(AppStorageKeys.relativeVolumeShouldUse.rawValue) var useRelativeVolume = false
     @AppStorage(AppStorageKeys.relativeVolumeValue.rawValue) var relativeVolumeValue = 1.0
+    @AppStorage(AppStorageKeys.showTags.rawValue) var showTags = false
 
     var body: some View {
         Form {
@@ -54,6 +55,9 @@ struct AdditionalSettingsView: View {
                     Slider(value: $relativeVolumeValue, in: 0...1.0)
                     Text("(\(relativeVolumeValue*100, specifier: "%.0f")%)")
                 }
+            }
+            Section(header: Text("Show tags")) {
+                Toggle("Enabled", isOn: $showTags)
             }
         }
         .padding(20)
