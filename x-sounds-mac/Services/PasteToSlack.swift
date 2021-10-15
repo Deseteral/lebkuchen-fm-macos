@@ -27,8 +27,10 @@ final class PasteToSlackHandler : ObservableObject {
         pasteboard.setString(text, forType: .string)
 
         var urlComponents = URLComponents(string: "slack://channel")
-        urlComponents?.queryItems?.append(URLQueryItem(name: "team", value: slackTeamId))
-        urlComponents?.queryItems?.append(URLQueryItem(name: "id", value: slackChannelId))
+        urlComponents?.queryItems = [
+            URLQueryItem(name: "team", value: slackTeamId),
+            URLQueryItem(name: "id", value: slackChannelId)
+        ]
         if let url = urlComponents?.url {
             NSWorkspace.shared.open(url)
         }
